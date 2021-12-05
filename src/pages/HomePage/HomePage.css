@@ -1,0 +1,17 @@
+.home-page
+{
+    background-color: white;
+}
+
+.home-page .navbar
+{
+    background-color: var(--button);
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+

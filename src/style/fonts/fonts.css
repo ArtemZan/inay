@@ -1,0 +1,30 @@
+@font-face {
+    font-family: ShuneetBook;
+    src: url(./Shuneet3\ Book.ttf);
+}
+
+@font-face {
+    font-family: BryndanDemi;
+    src: url(./Shuneet3\ Demi.ttf);
+}
+
+@font-face {
+    font-family: BryndanWhite;
+    src: url(./Bryndan_Write.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(./Quicksand.ttf);
+}
+
+
+
+#root{
+    --xxl: calc(3vw + 40px);
+    --xl: calc(2vw + 35px);
+    --l: calc(1vw + 25px);
+    --m: calc(1vw + 12px);
+    --s: calc(0.5vw + 10px);
+    --xs: calc(0.1vw + 10px);
+}

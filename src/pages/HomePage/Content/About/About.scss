@@ -1,0 +1,60 @@
+.home-page .content .about {
+    margin: 20px 0;
+
+    &>header {
+        font-size: var(--m);
+        color: var(--pink);
+        font-family: "BryndanWhite";
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    & > div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+
+        & .info {
+            flex: 1;
+            color: var(--body);
+            padding: 0px 5vw 0 0;
+            padding-right: 5vw;
+
+            & header {
+                font-family: "ShuneetBook";
+                font-size: var(--m);
+                color: var(--button-2);
+            }
+
+            & p {
+                font-family: "Quicksand";
+                font-size: var(--s);
+            }
+        }
+
+        & .image-and-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+
+            & img{
+                display: block;
+                width: 100%;
+            }
+
+            & .button{
+                margin-top: 10px;
+                padding: 10px 30px;
+                border-radius: 25px;
+            }
+
+            & .promotion {
+                color: var(--yellow);
+                font-family: "ShuneetDemi";
+                font-size: var(--xs);
+            }
+        }
+    }
+}

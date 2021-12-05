@@ -1,0 +1,121 @@
+.home-page .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    padding-top: 50px;
+    margin-top: 50px;
+
+
+    & > * {
+        width: 60%;
+    }
+
+    &>.quote {
+        background-color: var(--button);
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0;
+        padding: 0 10%;
+
+        height: 200px;
+
+        & img {
+            height: 100%;
+        }
+
+        & p {
+            padding: 10px 20px;
+            color: white;
+            font-family: "BryndanWhite";
+            font-size: calc(10px + 0.5vw);
+        }
+    }
+
+    & .good-things {
+        width: 100%;
+
+        & > header {
+            color: var(--dark-blue);
+            margin: 30px 55% 30px 15%;
+            font-size: var(--m);
+        }
+
+        & .good-thing {
+            width: 100%;
+            height: calc(100px + 20vw);
+            padding: 0 10%;
+            margin: 30px 0;
+            box-sizing: border-box;
+            display: flex;
+
+            &.with-bg {
+                background-color: var(--light-blue);
+            }
+
+            & img {
+                height: 100%;
+            }
+
+            & > div {
+                padding: calc(10px + 7vw);
+                color: var(--button);
+
+                & header {
+                    font-family: "ShuneetBook";
+                    font-size: var(--m);
+                }
+
+                & p {
+                    font-family: "Quicksand";
+                    font-size: var(--s);
+                }
+            }
+
+            & > div:first-child {
+                padding-left: 0;
+            }
+
+            & > div:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    & .ad {
+        height: calc(10vw + 100px);
+        background-color: var(--button);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        & header {
+            color: white;
+            font-family: "BryndanWhite";
+            font-size: var(--m);
+            margin-bottom: 20px;
+        }
+    }
+
+
+    & .mission{
+        text-align: center;
+        margin: 50px 0;
+
+        & header{
+            font-family: "BryndanWhite";
+            font-size: var(--m);
+            color: var(--logo);
+        }
+
+        & p{
+            font-family: "Quicksand";
+            font-size: var(--s);
+            color: var(--logo2);
+        }
+    }
+}

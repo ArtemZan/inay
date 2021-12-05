@@ -1,0 +1,41 @@
+.home-page .content .about-author
+{
+    width: 100%;
+    margin-top: calc(30px + 5vw);
+
+    & .author-card
+    {
+        box-sizing: border-box;
+        padding: 30px 10vw;
+        width: 100%;
+        
+        & header{
+            font-size: var(--l);
+            font-family: "BryndanWhite";
+            color: var(--pink);
+            text-align: center;
+            margin-bottom: 50px;
+            box-sizing: border-box;
+        }
+
+        & p{
+            color: var(--body);
+            font-family: "Quicksand";
+            font-size: var(--s);
+            display: inline-block;
+            width: 70%;
+        }
+
+        & img{
+            width: calc(50px + 10vw);
+            height: calc(50px + 10vw);
+            object-fit: contain;
+
+            border: 3px solid var(--button);
+            background-color: var(--button);
+            border-radius: 50%;
+
+            margin: 0 20px;
+        }
+    }
+}

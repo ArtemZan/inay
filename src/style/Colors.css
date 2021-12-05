@@ -1,0 +1,22 @@
+#root
+{
+    --green: #ABC754;
+    --purple: #EDB0D3;
+    --pink: #FAB3AD;
+    --light-pink: #FFF3EE;
+
+    --orange: #EFCE64;
+    --gold: #F6D757;
+    --yellow: #ECC41E;
+
+    --coral: #FFBE76;
+
+    --button: #87D5DB;
+    --button-2: #51A8B7;
+    --body: #0F676E;
+    --light-blue: #F2FAFF;
+    --logo: #99A7D5;
+    --logo2: #6574B2;
+    --dark-blue: var(--body);
+
+}

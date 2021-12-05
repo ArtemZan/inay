@@ -1,0 +1,20 @@
+.hoverable
+{
+    opacity: 0.8;
+    transition: opacity 0.5s;
+}
+
+.hoverable:hover
+{
+    opacity: 1;
+}
+
+
+.separator
+{
+    height: 1px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: black;
+}
+

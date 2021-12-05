@@ -1,0 +1,112 @@
+.home-page .content .main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-page .content .main-section > * {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.home-page .content .main-section > .info {
+  text-align: left;
+  margin: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: calc(12px + 1vw);
+  font-family: "ShuneetBook";
+}
+
+.home-page .content .main-section > .info ul {
+  padding: 0;
+  list-style: none;
+}
+
+.home-page .content .main-section > .info header {
+  font-family: "BryndanWhite";
+  font-size: calc(1vw + 25px);
+  font-weight: normal;
+  color: var(--coral);
+}
+
+.home-page .content .main-section > .info .promotion {
+  color: #ECC41E;
+}
+
+.home-page .content .main-section > .info .separator {
+  background-color: var(-logo);
+}
+
+.home-page .content .main-section > .info p {
+  color: var(--dark-blue);
+  font-size: calc(0.5vw + 10px);
+  font-family: "Quicksand";
+}
+
+.home-page .content .main-section > .info li:nth-child(1) {
+  color: var(--green);
+}
+
+.home-page .content .main-section > .info li:nth-child(2) {
+  color: var(--purple);
+}
+
+.home-page .content .main-section > .info li:nth-child(3) {
+  color: var(--orange);
+}
+
+.home-page .content .main-section > .info li:nth-child(4) {
+  color: var(-logo);
+}
+
+.home-page .content .main-section > .info li::before {
+  content: "";
+  width: 23px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  background-image: url(./heart.svg);
+}
+
+.home-page .content .main-section .slide-show .main-img {
+  width: 300px;
+  height: 300px;
+  border: 7px solid var(--coral);
+  border-radius: 20px;
+  padding: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: var(-logo);
+}
+
+.home-page .content .main-section .slide-show img {
+  background-color: var(-logo);
+  border-radius: 10px;
+  border: 3px solid var(--dark-blue);
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+}

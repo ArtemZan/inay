@@ -1,0 +1,108 @@
+
+.home-page .content .main-section
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    justify-content: space-between;
+
+    &>*{
+        flex-basis: 100%;
+        flex: 1;
+    }
+
+    &>.info
+    {
+        text-align: left;
+        margin: 0 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: calc(12px + 1vw);
+        font-family: "ShuneetBook";
+
+        & ul{
+            padding: 0;
+            list-style: none;
+        }
+
+        & header{
+            font-family: "BryndanWhite";
+            font-size: calc(1vw + 25px);
+            font-weight: normal;
+            color: var(--coral);
+        }
+
+        & .promotion{
+            color: #ECC41E;
+        }
+
+        & .separator{
+            background-color: var(-logo);
+        }
+
+        & p{
+            color:var(--dark-blue);
+            font-size: calc(0.5vw + 10px);
+            font-family: "Quicksand";
+        }
+
+        & li{
+            &:nth-child(1)
+            {
+                color: var(--green);
+            }
+            
+            &:nth-child(2)
+            {
+                color: var(--purple);
+            }
+            
+            &:nth-child(3)
+            {
+                color: var(--orange);
+            }
+            
+            &:nth-child(4)
+            {
+                color: var(-logo);
+            }
+
+            &::before
+            {
+                content: "";
+                width: 23px;
+                height: 20px;
+                margin-right: 10px;
+                display: inline-block;
+                
+                background-image: url(./heart.svg);
+            }
+        }
+    }
+
+    & .slide-show
+    {
+        & .main-img
+        {
+            width: 300px;
+            height: 300px;
+            border: 7px solid var(--coral);
+            border-radius: 20px;
+            padding: 25px;
+            object-fit: contain;
+            background-color: var(-logo);
+        }
+
+        & img{
+            background-color: var(-logo);
+            border-radius: 10px;
+            border: 3px solid var(--dark-blue);
+            
+            margin: 5px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
