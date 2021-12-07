@@ -25,7 +25,7 @@ function Card({ title, text, image, reversed, children, background }) {
 
     return (
         <div style = {{background}} className = "author-card">
-            {<header>{title}</header> || ""}
+            {title ? <header>{title}</header> : ""}
 
             {content}
         </div>

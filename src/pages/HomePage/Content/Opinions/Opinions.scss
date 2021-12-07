@@ -1,0 +1,112 @@
+.home-page .content .opinions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--light-blue);
+
+    & header {
+        color: var(--button);
+        font-family: "BryndanWhite";
+        font-size: var(--l);
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    & .quotes-wrapper {
+        display: flex;
+        width: 100%;
+
+        & .prev,
+        & .next {
+            @media screen and (min-width: 650px) {
+                display: none;
+            }
+
+            margin: 0 auto;
+        }
+        overflow: hidden;
+
+        & .quotes-inner-wrapper {
+            @media screen and (min-width: 650px) {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            overflow: hidden;
+            width: calc(90vw - 80px);
+
+            & .quotes {
+                position: relative;
+                left: 0;
+                top: 0;
+                transition: left 0.5s;
+
+                @media screen and (min-width: 650px) {
+                    justify-content: space-around;
+                }
+
+                justify-content: flex-start;
+
+                display: flex;
+
+                & .quote-card {
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    padding: 20px;
+                    color: white;
+                    width: calc(90vw - 100px);
+                    margin: 10px;
+                    flex-shrink: 0;
+
+                    @media screen and (min-width: 650px) {
+                        min-width: 150px;
+                        max-width: 250px;
+                        flex-shrink: 1;
+                    }
+
+                    &::before {
+                        content: "";
+                        background-image: url(./quote.svg);
+                        width: calc(28px * 2);
+                        height: 43px;
+                        display: block;
+                    }
+
+                    & > span {
+                        width: 30px;
+                        margin: 20px 0;
+                        background-color: white;
+                        height: 2px;
+                    }
+
+                    & .quote {
+                        display: flex;
+                        align-items: center;
+                        min-height: 100px;
+                    }
+
+                    & .author {
+                        text-transform: uppercase;
+                    }
+
+                    & .stars {
+                        & i {
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & > .button {
+        min-width: 25vw;
+        margin: 15px;
+        font-size: var(--s);
+    }
+}

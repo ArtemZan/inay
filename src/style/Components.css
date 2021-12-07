@@ -24,3 +24,15 @@
 .button.rounded {
   border-radius: 25px;
 }
+
+.dropdown .button:focus ~ .options, .dropdown .button:hover ~ .options {
+  display: block;
+}
+
+.dropdown .options {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  display: none;
+  list-style: none;
+}

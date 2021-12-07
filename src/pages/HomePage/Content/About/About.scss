@@ -5,15 +5,23 @@
         font-size: var(--m);
         color: var(--pink);
         font-family: "BryndanWhite";
-        text-align: center;
         width: 100%;
-        margin: 20px 0;
+        
+        @media screen and (min-width: 650px) {
+            text-align: center;
+            margin: 20px 0;
+        }
     }
     
     & > div {
         display: flex;
-        flex-direction: row;
-        margin-top: 40px;
+        flex-direction: column;
+        margin-top: 20px;
+
+        @media screen and (min-width: 650px) {
+            margin-top: 40px;
+            flex-direction: row;
+        }
 
         & .info {
             flex: 1;
@@ -25,6 +33,11 @@
                 font-family: "ShuneetBook";
                 font-size: var(--m);
                 color: var(--button-2);
+                width: 60%;
+
+                @media screen and (min-width: 650px) {
+                    width: 100%;
+                }
             }
 
             & p {

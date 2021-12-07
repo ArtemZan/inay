@@ -1,34 +1,55 @@
 .home-page .content .about-author
 {
     width: 100%;
-    margin-top: calc(30px + 5vw);
 
     & .author-card
     {
         box-sizing: border-box;
-        padding: 30px 10vw;
+        padding: 30px calc((100% - var(--width)) * 0.5);
         width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 650px) {
+            display: block;
+        }
         
         & header{
             font-size: var(--l);
             font-family: "BryndanWhite";
             color: var(--pink);
-            text-align: center;
-            margin-bottom: 50px;
             box-sizing: border-box;
+            
+            @media screen and (min-width: 650px) {
+                text-align: center;
+                margin-bottom: 50px;
+            }
         }
 
         & p{
             color: var(--body);
             font-family: "Quicksand";
-            font-size: var(--s);
+            font-size: 15px;
             display: inline-block;
-            width: 70%;
+
+            @media screen and (min-width: 650px) {
+                width: 70%;
+            }
         }
 
         & img{
-            width: calc(50px + 10vw);
-            height: calc(50px + 10vw);
+            @media screen and (min-width: 650px) {
+                width: calc(50px + 10vw);
+                height: calc(50px + 10vw);
+                order: 0;
+            }
+
+            align-self: center;
+            order: 1;
+
+            width: 250px;
+            height: 250px;
+
             object-fit: contain;
 
             border: 3px solid var(--button);

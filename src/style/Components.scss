@@ -11,18 +11,38 @@
         font-size: var(--xs);
         font-family: "ShuneetDemi";
     }
-    
-    &.primary
-    {
+
+    &.primary {
         background-color: var(--gold);
     }
 
-    &.secondary{
+    &.secondary {
         background-color: var(--button);
         padding: 15px 25px;
     }
 
     &.rounded {
         border-radius: 25px;
+    }
+}
+
+.dropdown {
+    & .button {
+
+        
+        &:focus,
+        &:hover {
+            &~.options{
+                display: block;
+            }
+        }
+    }
+
+    & .options{
+        padding: 0;
+        position: absolute;
+        left: 0;
+        display: none;
+        list-style: none;
     }
 }

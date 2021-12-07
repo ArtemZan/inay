@@ -1,10 +1,10 @@
 import { Button } from "../../../Components";
 import MainSection from "./MainSection/MainSection";
 import About from "./About/About";
+import Opinions from "./Opinions/Opinions";
+import Author from "./Author/Author";
 
 import "./Content.css"
-import Opinions from "./Opinions.js/Opinions";
-import Author from "./Author/Author";
 
 function GoodThing({ img, title, text, reverse }) {
     let content = <div>
@@ -12,7 +12,7 @@ function GoodThing({ img, title, text, reverse }) {
         <p>{text}</p>
     </div>
     return (
-        <div className={"good-thing" + (reverse ? "" : " with-bg")}>
+        <div className={"good-thing" + (reverse ? " with-bg" : "")}>
             {reverse ? content : ""}
             <img src={"images/good_things/" + img}></img>
             {reverse ? "" : content}
@@ -35,10 +35,10 @@ export default function Content() {
             <div className="good-things">
                 <header>What useful and good things can you find in the book?</header>
 
-                <GoodThing img="1.png" title="Inspire to love." text="“It’s Not About You” will inspire and encourage your child to love and enjoy the blessings of having siblings!" />
-                <GoodThing img="2.png" reverse title="Funny plot" text="Watch what happens when older sibling, Prince Circle gets up to all sorts of cute mischief in order to get ahead of his little brother." />
-                <GoodThing img="3.png" title="Wholly and Holy" text="Every kid needs a magic bean! Wholly Bean is here to help - by injecting courage and magic to rekindle the love and affection between Prince Circle and Little Diamond." />
-                <GoodThing img="4.png" reverse title="Cushy Cover" text="Rounded corners and padded covers means no more tears from torn and smudged pages, or spiky edges. Hardboard quality pages are durable and encourage the practice of fine motor skills such as the pinching motion." />
+                <GoodThing img="1.png" reverse title="Inspire to love." text="“It’s Not About You” will inspire and encourage your child to love and enjoy the blessings of having siblings!" />
+                <GoodThing img="2.png" title="Funny plot" text="Watch what happens when older sibling, Prince Circle gets up to all sorts of cute mischief in order to get ahead of his little brother." />
+                <GoodThing img="3.png" reverse title="Wholly and Holy" text="Every kid needs a magic bean! Wholly Bean is here to help - by injecting courage and magic to rekindle the love and affection between Prince Circle and Little Diamond." />
+                <GoodThing img="4.png" title="Cushy Cover" text="Rounded corners and padded covers means no more tears from torn and smudged pages, or spiky edges. Hardboard quality pages are durable and encourage the practice of fine motor skills such as the pinching motion." />
             </div>
 
             <div className="ad">
@@ -70,6 +70,34 @@ export default function Content() {
                     <br /><br />
                     It has been shown that when a child and parent read books together, their bond increases - through close contact and affections, eye contact, and laughter. These experiences are sure to create a lifelong love of books.
                 </p>
+            </div>
+
+            <img id="elephants" src="images/Elephants.png" />
+
+            <div className="ad">
+                <header>
+                    Grab a digital copy for your little one just for USD3.99
+                </header>
+
+                <Button primary rounded hoverable>
+                    Buy now for USD3.99
+                </Button>
+            </div>
+
+            <div className="footer">
+                <div className="links">
+                    <a link="/about-the-book">About the book</a>
+                    <a link="/reviews">Reviews</a>
+                    <a link="/about-the-author">About the author</a>
+                    <a link="/mission">Little Kind Book’s Mission</a>
+                </div>
+
+                <img src="images/logo.png">
+                </img>
+
+                <div className="copyright">
+                    © 2020
+                </div>
             </div>
         </div>
     )

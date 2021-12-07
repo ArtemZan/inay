@@ -1,0 +1,97 @@
+.home-page .navbar {
+  background-color: var(--button);
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.home-page .navbar .logo {
+  height: 50px;
+  width: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  margin: auto;
+}
+
+@media screen and (min-width: 650px) {
+  .home-page .navbar .logo {
+    margin: 0;
+    margin-left: 5px;
+  }
+}
+
+.home-page .navbar .logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.home-page .navbar .links {
+  display: none;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+@media screen and (min-width: 650px) {
+  .home-page .navbar .links {
+    display: block;
+  }
+}
+
+.home-page .navbar .links a {
+  font-size: var(--s);
+  font-family: "ShuneetDemi";
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.home-page .navbar .links a,
+.home-page .navbar .dropdown a {
+  text-decoration: none;
+}
+
+.home-page .navbar .dropdown {
+  display: block;
+  position: fixed;
+  margin-left: 7px;
+}
+
+@media screen and (min-width: 650px) {
+  .home-page .navbar .dropdown {
+    display: none;
+  }
+}
+
+.home-page .navbar .dropdown .options {
+  width: 100vw;
+  text-align: center;
+  height: 100vh;
+  background-color: rgba(135, 213, 219, 0.5);
+}
+
+.home-page .navbar .dropdown .button {
+  color: white;
+  font-size: var(--l);
+}
+
+.home-page .navbar .dropdown li {
+  background-color: white;
+  padding: 10px;
+}
+
+.home-page .navbar .dropdown li a {
+  color: var(--button-2);
+}
