@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { Button } from "../../../../Components";
 
-import "./MainSection.css"
-
 function SlideShow() {
-    const imagesUrls = ["Antonia1.png", "Antonia2.png", "Baby1.png", "Baby2.png", "Card.png"]
     const [mainImage, SetMainImage] = useState(0);
 
-    const images = imagesUrls.map((url, index) => <img
-        key={index}
-        src={"images/" + url}
-        className={mainImage === index ? "selected-img" : ""}
-        onClick={SetMainImage.bind(null, index)}
-    ></img>
-    );
+    const images = [];
+    for (let i = 0; i < 5; i++) {
+        images.push(<img
+            key={i}
+            src={"images/" + (i + 1) + ".png"}
+            className={mainImage === i ? "selected-img" : ""}
+            onClick={SetMainImage.bind(null, i)}
+        ></img>
+        );
+    }
 
     return (
         <div className="slide-show">
-            <img className="main-img" src={"images/" + imagesUrls[mainImage]}></img>
+            <img className="main-img" src={"images/" + (mainImage + 1) + ".png"}></img>
             <div className="images-nav">
                 {images}
             </div>
@@ -37,8 +37,10 @@ function Info() {
                 <li>Great gift for kids!</li>
             </ul>
 
-            <Button primary rounded hoverable>Buy now for USD 15.99<br />and get BONUS Digital Copy!</Button>
-            <span className = "promotion">For every 2 books you purchase, we donate 1 book!</span>
+            <span className="promotion">
+                <Button primary rounded hoverable>Buy now for USD 15.99<br />and get BONUS Digital Copy!</Button>
+                For every 2 books you purchase, we donate 1 book!
+            </span>
 
             <span className="separator"></span>
 

@@ -1,0 +1,53 @@
+.home-page .footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: calc(10px + 1vw);
+
+    @media screen and (min-width: 450px) {
+        flex-direction: column;
+    }
+
+    & .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: var(--s);
+        font-family: "ShuneetDemi";
+        color: var(--logo2);
+
+        & > * {
+            margin: 7px 0;
+        }
+
+        @media screen and (min-width: 450px) {
+            flex-direction: row;
+
+            & > * {
+                margin: 0 2vw;
+            }
+        }
+    }
+
+    & > .copyright-section {
+        margin: auto;
+
+        & img {
+            margin: 10px 0;
+
+            @media screen and (min-width: 450px) {
+                margin-top: 20px;
+            }
+        }
+
+        & .copyright {
+            color: var(--logo2);
+
+            @media screen and (min-width: 450px) {
+                margin: 10px 0;
+            }
+
+            margin: 10px 0;
+        }
+    }
+}

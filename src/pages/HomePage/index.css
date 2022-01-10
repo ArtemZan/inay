@@ -1,0 +1,7 @@
+@import "./Navbar/Navbar.css";
+@import "./Content/Content.css";
+@import "./Footer/index.css";
+
+.home-page {
+  background-color: white;
+}

@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    background-color: var(--light-blue);
 
     & header {
         color: var(--button);
@@ -13,100 +11,82 @@
         margin: 30px 0;
     }
 
-    & .quotes-wrapper {
-        display: flex;
-        width: 100%;
-
-        & .prev,
-        & .next {
-            @media screen and (min-width: 650px) {
-                display: none;
-            }
-
-            margin: 0 auto;
+    & .quotes{
+        display: none;
+        
+        @media screen and (min-width: 650px) {
+            display: flex;
         }
-        overflow: hidden;
+    }
 
-        & .quotes-inner-wrapper {
-            @media screen and (min-width: 650px) {
-                width: 100%;
-                overflow-x: auto;
-            }
+    & .carousel{
+        display: inherit;
+        
+        @media screen and (min-width: 650px) {
+            display: none;
+        }
+    }
 
-            overflow: hidden;
-            width: calc(90vw - 80px);
+    & .quote-card {
+        box-sizing: border-box;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        width: calc(100% - 20px);
+        margin: 10px;
+        flex-shrink: 0;
 
-            & .quotes {
-                position: relative;
-                left: 0;
-                top: 0;
-                transition: left 0.5s;
+        @media screen and (min-width: 650px) {
+            min-width: 150px;
+            max-width: 250px;
+            flex-shrink: 1;
+        }
 
-                @media screen and (min-width: 650px) {
-                    justify-content: space-around;
-                }
+        &::before {
+            content: "";
+            background-image: url(./quote.svg);
+            width: calc(28px * 2);
+            height: 43px;
+            display: block;
+        }
 
-                justify-content: flex-start;
+        & > span {
+            width: 30px;
+            margin: 20px 0;
+            background-color: white;
+            height: 2px;
+        }
 
-                display: flex;
+        & .quote {
+            display: flex;
+            align-items: center;
+            min-height: 100px;
+        }
 
-                & .quote-card {
-                    box-sizing: border-box;
-                    border-radius: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    padding: 20px;
-                    color: white;
-                    width: calc(90vw - 100px);
-                    margin: 10px;
-                    flex-shrink: 0;
+        & .author {
+            text-transform: uppercase;
+        }
 
-                    @media screen and (min-width: 650px) {
-                        min-width: 150px;
-                        max-width: 250px;
-                        flex-shrink: 1;
-                    }
-
-                    &::before {
-                        content: "";
-                        background-image: url(./quote.svg);
-                        width: calc(28px * 2);
-                        height: 43px;
-                        display: block;
-                    }
-
-                    & > span {
-                        width: 30px;
-                        margin: 20px 0;
-                        background-color: white;
-                        height: 2px;
-                    }
-
-                    & .quote {
-                        display: flex;
-                        align-items: center;
-                        min-height: 100px;
-                    }
-
-                    & .author {
-                        text-transform: uppercase;
-                    }
-
-                    & .stars {
-                        & i {
-                            margin: 5px;
-                        }
-                    }
-                }
+        & .stars {
+            & i {
+                margin: 5px;
             }
         }
     }
 
     & > .button {
         min-width: 25vw;
-        margin: 15px;
+        max-width: 360px;
+        margin: var(--m);
+
+        @media screen and (min-width: 1440px) {
+            margin: 50px;
+        }
+
         font-size: var(--s);
     }
 }

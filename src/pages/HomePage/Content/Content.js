@@ -4,8 +4,6 @@ import About from "./About/About";
 import Opinions from "./Opinions/Opinions";
 import Author from "./Author/Author";
 
-import "./Content.css"
-
 function GoodThing({ img, title, text, reverse }) {
     let content = <div>
         <header>{title}</header>
@@ -82,22 +80,6 @@ export default function Content() {
                 <Button primary rounded hoverable>
                     Buy now for USD3.99
                 </Button>
-            </div>
-
-            <div className="footer">
-                <div className="links">
-                    <a link="/about-the-book">About the book</a>
-                    <a link="/reviews">Reviews</a>
-                    <a link="/about-the-author">About the author</a>
-                    <a link="/mission">Little Kind Book’s Mission</a>
-                </div>
-
-                <img src="images/logo.png">
-                </img>
-
-                <div className="copyright">
-                    © 2020
-                </div>
             </div>
         </div>
     )

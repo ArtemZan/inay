@@ -1,5 +1,3 @@
-import "./Author.css";
-
 function Card({ title, text, image, reversed, children, background }) {
     const textEl = <p>
         {text}

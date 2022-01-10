@@ -29,7 +29,7 @@
         & p{
             color: var(--body);
             font-family: "Quicksand";
-            font-size: 15px;
+            font-size: var(--s);
             display: inline-block;
 
             @media screen and (min-width: 650px) {

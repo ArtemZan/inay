@@ -1,0 +1,78 @@
+.home-page .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: calc(10px + 1vw);
+}
+
+@media screen and (min-width: 450px) {
+  .home-page .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.home-page .footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: var(--s);
+  font-family: "ShuneetDemi";
+  color: var(--logo2);
+}
+
+.home-page .footer .links > * {
+  margin: 7px 0;
+}
+
+@media screen and (min-width: 450px) {
+  .home-page .footer .links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .home-page .footer .links > * {
+    margin: 0 2vw;
+  }
+}
+
+.home-page .footer > .copyright-section {
+  margin: auto;
+}
+
+.home-page .footer > .copyright-section img {
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 450px) {
+  .home-page .footer > .copyright-section img {
+    margin-top: 20px;
+  }
+}
+
+.home-page .footer > .copyright-section .copyright {
+  color: var(--logo2);
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 450px) {
+  .home-page .footer > .copyright-section .copyright {
+    margin: 10px 0;
+  }
+}

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Button } from "../../../../Components";
-import "./Opinions.css";
+import { Button, Carousel } from "../../../../Components";
 
 function Quote({ quote, author, background }) {
     return (
@@ -54,7 +53,19 @@ export default function Opinions() {
                 What people say?
             </header>
 
-            <div className="quotes-wrapper">
+            <Carousel cards={[
+                <Quote background="var(--logo)" author="ryan roldan" quote="My daughter really liked the book, she is now constantly drawing the Prince." />,
+                <Quote background="var(--pink)" author="NINA STELMAH" quote="Nice book, my child and I love the stoty and illustrations. We read it often before bed." />,
+                <Quote background="var(--orange)" author="LISA NORMAN" quote="This story is similar to mine. My sons behave this way ... the book will suit them." />
+            ]} />
+
+            <div className = "quotes">
+                <Quote background="var(--logo)" author="ryan roldan" quote="My daughter really liked the book, she is now constantly drawing the Prince." />
+                <Quote background="var(--pink)" author="NINA STELMAH" quote="Nice book, my child and I love the stoty and illustrations. We read it often before bed." />
+                <Quote background="var(--orange)" author="LISA NORMAN" quote="This story is similar to mine. My sons behave this way ... the book will suit them." />
+            </div>
+
+            {/* <div className="quotes-wrapper">
                 <Button onClick={Prev} className="prev">
                     <i className="fas fa-chevron-left"></i>
                 </Button>
@@ -70,7 +81,7 @@ export default function Opinions() {
                 <Button onClick={Next} className="next">
                     <i className="fas fa-chevron-right"></i>
                 </Button>
-            </div>
+            </div> */}
 
 
             <Button rounded hoverable secondary>Leave a review</Button>

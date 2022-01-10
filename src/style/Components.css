@@ -1,28 +1,39 @@
-.button {
+button.button,
+a.link {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-.button.primary, .button.secondary {
+button.button.primary, button.button.secondary,
+a.link.primary,
+a.link.secondary {
   padding: 20px;
   color: white;
   font-weight: bold;
-  font-size: var(--xs);
+  font-size: var(--s);
   font-family: "ShuneetDemi";
 }
 
-.button.primary {
+button.button.primary,
+a.link.primary {
   background-color: var(--gold);
 }
 
-.button.secondary {
+button.button.secondary,
+a.link.secondary {
   background-color: var(--button);
   padding: 15px 25px;
 }
 
-.button.rounded {
+button.button.rounded,
+a.link.rounded {
   border-radius: 25px;
+}
+
+a.link,
+a.link:active {
+  text-decoration: none;
 }
 
 .dropdown .button:focus ~ .options, .dropdown .button:hover ~ .options {
@@ -35,4 +46,57 @@
   left: 0;
   display: none;
   list-style: none;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel .prev,
+.carousel .next {
+  color: grey;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media screen and (min-width: 650px) {
+  .carousel .prev,
+  .carousel .next {
+    display: none;
+  }
+}
+
+.carousel .prev i,
+.carousel .next i {
+  width: 10px;
+}
+
+.carousel .cards-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.carousel .cards-wrapper .cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.carousel .cards-wrapper .cards-container .card-wrapper {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }

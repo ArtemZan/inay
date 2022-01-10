@@ -4,7 +4,12 @@
 }
 
 @font-face {
-    font-family: BryndanDemi;
+    font-family: ShuneetHeavy;
+    src: url(./Shuneet3\ Heavy.ttf);
+}
+
+@font-face {
+    font-family: ShuneetDemi;
     src: url(./Shuneet3\ Demi.ttf);
 }
 
@@ -22,9 +27,21 @@
 
 #root{
     --xxl: calc(3vw + 40px);
-    --xl: calc(2vw + 35px);
-    --l: calc(1vw + 25px);
-    --m: calc(1vw + 15px);
-    --s: calc(0.5vw + 10px);
+    --xl: calc(2vw + 30px);
+    --l: calc(1.3vw + 17px);
+    --m: calc(0.5vw + 17px);
+    --s: calc(0.3vw + 13px);
     --xs: calc(0.1vw + 10px);
+    --xxs: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+    #root{
+        --xxl: calc(3 * 14.4px + 40px);
+        --xl: calc(2 * 14.4px + 30px);
+        --l: calc(1.3 * 14.4px + 17px);
+        --m: calc(0.5 * 14.4px + 17px);
+        --s: calc(0.4 * 14.4px + 13px);
+        --xs: calc(0.1 * 14.4px + 10px);
+    }
 }

@@ -1,5 +1,4 @@
-import { Dropdown } from "../../../Components"
-import "./Navbar.css"
+import { Button, Dropdown, Link } from "../../../Components"
 
 export default function Navbar() {
     return <div className="navbar">
@@ -14,13 +13,15 @@ export default function Navbar() {
             <a href="/mission">Little Kind Book’s Mission</a>
         </div>
 
-        <Dropdown options = {[
+        <Dropdown options={[
             <a href="/about-the-book">About the book</a>,
             <a href="/reviews">Reviews</a>,
             <a href="/about-the-author">About the author</a>,
             <a href="/mission">Little Kind Book’s Mission</a>
-        ]} buttonContent = {<i className = "fas fa-bars"></i>}>
+        ]} buttonContent={<i className="fas fa-bars"></i>}>
 
         </Dropdown>
+
+        <Link link = "https://www.instagram.com" newTab className = "instagram"> <i className="fab fa-instagram" /></Link>
     </div>
 }

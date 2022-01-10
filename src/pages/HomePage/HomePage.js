@@ -1,5 +1,5 @@
 import Content from "./Content/Content"
-import "./HomePage.css"
+import Footer from "./Footer/Footer"
 import Navbar from "./Navbar/Navbar"
 
 export default function HomePage()
@@ -8,6 +8,7 @@ export default function HomePage()
         <div className = "page home-page">
             <Navbar />
             <Content />
+            <Footer />
         </div>
     )
 }

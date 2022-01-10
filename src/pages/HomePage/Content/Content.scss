@@ -1,16 +1,28 @@
+@import "./About/About.css", "./Author/Author.css", "./MainSection/MainSection.css", "./Opinions/Opinions.css";
+
 .home-page .content {
     display: flex;
     align-items: center;
     flex-direction: column;
 
+    --width: 90vw;
+
+    @media screen and (min-width: 800px) {
+        --column-gap: 10%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        --width: 1300px;
+    }
+
+    --column-1: calc(var(--width) * 0.5);
+    --column-2: calc(var(--width) * 0.5 - var(--column-gap));
+    --column-gap: 30px;
+
     padding-top: 50px;
     margin-top: 60px;
 
     & > * {
-        --width: 90%;
-        @media screen and (min-width: 1000px) {
-            --width: calc(60% + 200px);
-        }
         width: var(--width);
     }
 
@@ -23,27 +35,29 @@
         margin: 10px 0;
         padding: 0;
         padding-bottom: 20px;
-        
+
         @media screen and (min-width: 650px) {
             padding: 0 calc((100% - var(--width)) * 0.5);
             flex-direction: row;
         }
 
         & img {
+            object-fit: cover;
+
             @media screen and (min-width: 650px) {
-                width: calc(280px + 8vw);
-                margin-right: 5%;
+                width: var(--column-1);
             }
 
-            margin-right: 10%;
             width: 100%;
         }
 
         & p {
             @media screen and (min-width: 650px) {
+                margin-left: var(--column-gap);
+                padding: 0;
                 width: 10px;
                 flex-grow: 1;
-                font-size: var(--s);
+                font-size: var(--m);
             }
 
             box-sizing: border-box;
@@ -63,14 +77,17 @@
 
         & > header {
             color: var(--dark-blue);
-            font-size: var(--m);
+            font-size: var(--l);
             font-weight: bold;
             font-family: "BryndanWhite";
             margin: 20px;
             text-align: center;
+            box-sizing: border-box;
 
             @media screen and (min-width: 650px) {
-                margin: 30px 55% 30px 15%;
+                margin: 30px calc((100% - var(--width)) / 2);
+                width: var(--column-1);
+                padding: var(--m) calc(max(min(100vw - 1200px, 100px), 20px));
             }
         }
 
@@ -84,36 +101,61 @@
             margin: 30px 0;
 
             @media screen and (min-width: 650px) {
-                height: calc(100px + 20vw);
+                max-height: 500px;
                 flex-direction: row;
             }
 
             &.with-bg {
                 background-color: var(--light-blue);
-            }
+                justify-content: flex-end;
 
-            & img {
-                height: 100%;
-
-                @media screen and (min-width: 650px) {
-                    order: 0;
+                & img {
+                    @media screen and (min-width: 650px) {
+                        width: calc(var(--column-1));
+                    }
                 }
 
+                & > div{
+                    margin-left: auto;
+                }
+            }
+            
+            & img {
+                @media screen and (min-width: 650px) {
+                    width: calc(var(--column-1) + 20px);
+                    order: 0;
+                }
+                
                 order: 1;
             }
-
+            
             & > div {
-                padding: calc(10px + 7vw);
-                color: var(--button-2);
+                margin: auto;
+                margin-left: var(--xl);
+                padding: 20px;
+                padding-right: 60px;
+
+                @media screen and (min-width: 650px) {
+                    padding: calc(min(calc(10px + 7vw), 50px));
+                }
+
+                color: var(--body);
 
                 & header {
                     font-family: "ShuneetBook";
-                    font-size: var(--m);
+                    font-size: var(--l);
+
+                    color: var(--button-2);
                 }
 
                 & p {
                     font-family: "Quicksand";
                     font-size: var(--s);
+
+                    @media screen and (min-width: 650px) {
+                        max-width: 400px;
+                        width: calc(235px + 5vw);
+                    }
                 }
             }
 
@@ -169,28 +211,5 @@
 
     & #elephants {
         width: 100%;
-    }
-
-    & .footer {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        & .links {
-            font-size: var(--s);
-            font-family: "ShuneetDemi";
-            color: var(--logo2);
-
-            margin: 20px 0;
-
-            & > * {
-                margin: 0 15px;
-            }
-        }
-
-        & .copyright {
-            color: var(--logo2);
-            margin: 30px 0;
-        }
     }
 }

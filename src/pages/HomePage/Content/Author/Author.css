@@ -40,7 +40,7 @@
 .home-page .content .about-author .author-card p {
   color: var(--body);
   font-family: "Quicksand";
-  font-size: 15px;
+  font-size: var(--s);
   display: inline-block;
 }
 

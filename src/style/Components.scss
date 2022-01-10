@@ -1,4 +1,5 @@
-.button {
+button.button,
+a.link {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -8,7 +9,7 @@
         padding: 20px;
         color: white;
         font-weight: bold;
-        font-size: var(--xs);
+        font-size: var(--s);
         font-family: "ShuneetDemi";
     }
 
@@ -26,23 +27,65 @@
     }
 }
 
+a.link,
+a.link:active {
+    text-decoration: none;
+}
+
 .dropdown {
     & .button {
-
-        
         &:focus,
         &:hover {
-            &~.options{
+            & ~ .options {
                 display: block;
             }
         }
     }
 
-    & .options{
+    & .options {
         padding: 0;
         position: absolute;
         left: 0;
         display: none;
         list-style: none;
+    }
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+
+    & .prev,
+    & .next {
+        color: grey;
+        margin: 0 auto;
+        padding: 0;
+
+        @media screen and (min-width: 650px) {
+            display: none;
+        }
+
+        & i {
+            width: 10px;
+        }
+    }
+
+    & .cards-wrapper {
+        width: 100%;
+        overflow-x: hidden; // to do
+
+        & .cards-container {
+
+            & .card-wrapper{
+                flex-basis: 100%;
+            }
+
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            width: max-content;
+            transition: transform 0.7s;
+        }
     }
 }
