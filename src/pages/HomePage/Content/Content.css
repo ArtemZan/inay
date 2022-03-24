@@ -1,7 +1,7 @@
-@import url(c:\Users\Professional\Documents\Web\inay\src\pages\HomePage\Content\About\About.css);
-@import url(c:\Users\Professional\Documents\Web\inay\src\pages\HomePage\Content\Author\Author.css);
-@import url(c:\Users\Professional\Documents\Web\inay\src\pages\HomePage\Content\MainSection\MainSection.css);
-@import url(c:\Users\Professional\Documents\Web\inay\src\pages\HomePage\Content\Opinions\Opinions.css);
+@import url("./About/About.css");
+@import url("./Author/Author.css");
+@import url("./MainSection/MainSection.css");
+@import url("./Opinions/Opinions.css");
 .home-page .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,7 +118,7 @@
   .home-page .content .good-things > header {
     margin: 30px calc((100% - var(--width)) / 2);
     width: var(--column-1);
-    padding: var(--m) calc(max(min(100vw - 1200px, 100px), 20px));
+    padding: var(--m) calc(max(min(100vw, 1300px), 1220px) - 1200px);
   }
 }
 

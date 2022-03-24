@@ -1,4 +1,4 @@
-@import "./About/About.css", "./Author/Author.css", "./MainSection/MainSection.css", "./Opinions/Opinions.css";
+@import url("./About/About.css"), url("./Author/Author.css"), url("./MainSection/MainSection.css"), url("./Opinions/Opinions.css");
 
 .home-page .content {
     display: flex;
@@ -87,7 +87,7 @@
             @media screen and (min-width: 650px) {
                 margin: 30px calc((100% - var(--width)) / 2);
                 width: var(--column-1);
-                padding: var(--m) calc(max(min(100vw - 1200px, 100px), 20px));
+                padding: var(--m) calc(max(min(100vw, 1300px), 1220px) - 1200px);
             }
         }
 
